@@ -1,4 +1,4 @@
-import { FaPlusCircle } from "react-icons/fa";
+import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { useState } from "react";
 
 const Question = ({ title, info }) => {
@@ -10,7 +10,11 @@ const Question = ({ title, info }) => {
         <div className='flex justify-between items-center bg-purple-100 px-4 py-2 gap-2 rounded-md border border-gray-400 shodow-lg'>
           <p>{title}</p>
           <button onClick={() => setShowInfo((prevState) => !prevState)}>
-            <FaPlusCircle className='text-purple-600 text-xl hover:scale-110 transition' />
+            {showInfo ? (
+              <FaMinusCircle className=' text-xl hover:scale-110 transition' />
+            ) : (
+              <FaPlusCircle className=' text-xl hover:scale-110 transition' />
+            )}
           </button>
         </div>
         <p className='mt-2 leading-relaxed text-sm text-gray-700'>
