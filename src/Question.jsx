@@ -18,7 +18,7 @@ const Question = ({ title, info }) => {
           </button>
         </div>
         <p className='mt-2 leading-relaxed text-sm text-gray-700'>
-          {showInfo ? info : description}
+          {description}
         </p>
       </div>
     </>
